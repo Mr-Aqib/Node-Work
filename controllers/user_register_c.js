@@ -1,7 +1,6 @@
 const user_registration = (req, res) =>
 {
-    const name = req.body.user_name;
-    console.log(name);
-    res.send(name)
+    const { name, email, age, password } = req.body
+    res.json({name, email, age, password})
 }
 module.exports = user_registration
